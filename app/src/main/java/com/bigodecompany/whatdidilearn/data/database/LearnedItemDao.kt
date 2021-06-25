@@ -12,9 +12,9 @@ interface LearnedItemDao {
     @Query("SELECT * FROM learned_item")
     fun getAll(): LiveData<List<LearnedItem>>
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insert(learnedItem: LearnedItem)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(learnedItem: LearnedItem)
 
-    @Insert(onConflict = OnConflictStrategy.IGNORE)
-    fun insert(learnedItems: List<LearnedItem>)
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insert(learnedItems: List<LearnedItem>)
 }

@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         })
 
         binding.newItemButton.setOnClickListener {
-            val intent = Intent(this, NewLearnedItemActivity::class.java)
+            val intent = Intent(this, NewItemActivity::class.java)
             startActivity(intent)
         }
     }

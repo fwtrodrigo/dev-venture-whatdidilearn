@@ -8,7 +8,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    <color name="yellow">#FFFF00</color>
-    <color name="green">#006600</color>
-    <color name="blue">#0000FF</color>
+    <color name="level_low">#FFFF00</color>
+    <color name="level_medium">#006600</color>
+    <color name="level_high">#0000FF</color>
 </resources>

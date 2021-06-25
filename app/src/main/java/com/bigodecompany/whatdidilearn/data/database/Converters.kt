@@ -5,17 +5,12 @@ import com.bigodecompany.whatdidilearn.entities.UnderstandingLevel
 
 class Converters {
     @TypeConverter
-    fun levelToInt(level: UnderstandingLevel): Int {
-        return level.ordinal
+    fun fromUnderstandingLevel(understandingLevel: UnderstandingLevel): String {
+        return understandingLevel.name
     }
 
     @TypeConverter
-    fun intToLevel(int: Int): UnderstandingLevel {
-        return when (int) {
-            UnderstandingLevel.LOW.ordinal -> UnderstandingLevel.LOW
-            UnderstandingLevel.MEDIUM.ordinal -> UnderstandingLevel.MEDIUM
-            UnderstandingLevel.HIGH.ordinal -> UnderstandingLevel.MEDIUM
-            else -> UnderstandingLevel.MEDIUM
-        }
+    fun toUnderstandingLevel(understandingLevel: String): UnderstandingLevel {
+        return UnderstandingLevel.valueOf(understandingLevel)
     }
 }

@@ -3,6 +3,7 @@ package com.bigodecompany.whatdidilearn.di
 import com.bigodecompany.whatdidilearn.data.LearnedItemRepository
 import com.bigodecompany.whatdidilearn.data.database.LearnedItemDatabase
 import com.bigodecompany.whatdidilearn.viewmodel.MainViewModel
+import com.bigodecompany.whatdidilearn.viewmodel.NewItemViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import org.koin.androidx.viewmodel.dsl.viewModel
@@ -28,6 +29,10 @@ object LearnedItemModule {
 
         viewModel {
             MainViewModel(repository = get())
+        }
+
+        viewModel {
+            NewItemViewModel(repository = get())
         }
     }
 }

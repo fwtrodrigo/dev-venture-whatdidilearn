@@ -50,7 +50,7 @@ abstract class LearnedItemDatabase : RoomDatabase() {
             }
         }
 
-        private fun populateDatabase(learnedItemDao: LearnedItemDao) {
+        private suspend fun populateDatabase(learnedItemDao: LearnedItemDao) {
             val items = getAll()
             learnedItemDao.insert(items)
         }
